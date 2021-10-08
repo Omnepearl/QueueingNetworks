@@ -155,7 +155,6 @@ qt %>%
    gt() %>%
    tab_header(
       title = md("Measures of Performance for G/G/1 Queues"))
-
 ```
 
 <br />
@@ -181,7 +180,6 @@ qt2 %>%
    gt() %>%
    tab_header(
       title = md("Measures of Performance for G/G/1 Queues"))
-
 ```
 
 ## The Birth Death Process
@@ -212,7 +210,6 @@ BD.solve <- function(lambda, mu){
 ```{r ex8}
 mu = c(1, 2, 2)
 lambda = c(3, 2, 1)
-
 pn = BD.solve(lambda, mu)
 print(pn)
 ```
@@ -323,7 +320,6 @@ mmc.summary <- function(lambda, mu, c,
 q <- mmc.summary(lambda = 4, mu = 4.4545, c = 1, plot_pn = TRUE,
                  plot_waitQ = TRUE,
                  plot_waitSys = TRUE)
-
 library(gt)
 qt <- q$res
 qt %>%
@@ -365,7 +361,6 @@ Moving on, we consider Markovian queueing models with parallel channels: M/M/c/$
 
 ```{r ex7}
 q <- mmc.summary(lambda = 4, mu = 2, c = 3, plot_pn = TRUE)
-
 library(gt)
 qt <- q$res
 qt %>%
@@ -377,9 +372,4 @@ qt %>%
 <br />
 
 You may have noticed that we did not plot the probability density functions for waiting times in queue or waiting times in system for the m/m/c queue. Instead we define two functions for m/m/c queues which return the cumulative probabilities $P\{T \geq t\}$ and $P\{T_q \geq t\}$. 
-
-
-
-
-
 
